@@ -1,0 +1,4 @@
+python-magic-bin
+python-magic
+tqdm
+pandas
