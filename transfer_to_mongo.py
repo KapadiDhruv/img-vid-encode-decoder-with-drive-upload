@@ -6,13 +6,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 mongo_url = os.environ.get('MONGO_URL')
-local_path = 'encoded-data/CP'
-
-# Check if the JSON file exists
-json_file_path = f'{local_path}/file_links.json'
 with open("sub_list.csv", "r") as f_subreddits:
     for sub in f_subreddits:
         sub = sub.strip()
+
+        local_path = f'encoded-data/{sub}'
+
+        # Check if the JSON file exists
+        json_file_path = f'{local_path}/file_links.json'
 
         if not exists(json_file_path):
             print(f'JSON file "{json_file_path}" does not exist.')

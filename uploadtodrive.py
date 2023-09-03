@@ -114,5 +114,5 @@ with open("sub_list.csv", "r") as f_subreddits:
         folder_contents = create_folder_structure(local_path)
 
         # Write the folder contents to a JSON file
-        with open(f'{sub}/file_links.json', 'w') as f:
+        with open(f'{local_path}/file_links.json', 'w') as f:
             json.dump(folder_contents, f, indent=4)
